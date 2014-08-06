@@ -1,9 +1,9 @@
 import random
 import time
 
-def generacion():
+def generacion(largo):
     lista = []
-    for i in range (1,100000):
+    for i in range (0,largo):
         
         numero = int (random.uniform(0,100000))
         
@@ -21,21 +21,24 @@ def SelectedSort(l):
             l[i],l[indiceMenor]=l[indiceMenor],l[i]
 
 
-x=generacion()
+print ("SelectedSort")
+print ("Informacion Basica: El algorito genera una lista aleatoria, dicha lista no se muestra. ")
+longitud = int (raw_input ("Ingrese la longitud de elementos deseados"))
+lista = generacion(longitud)
 print ("Espere mientras el programa ordena la lista. Esto va a tardar un rato")
 inicio = time.time()
-SelectedSort(x)
+SelectedSort(lista)
 fin=time.time()
 total = fin - inicio
 print ("Ordenar lista desordenada",total)
 inicio = time.time()
-SelectedSort(x)
+SelectedSort(lista)
 fin=time.time()
 total = fin - inicio
 print ("Ordenar lista ordenada",total)
-x.reverse()
+lista.reverse()
 inicio = time.time()
-SelectedSort(x)
+SelectedSort(lista)
 fin=time.time()
 total = fin - inicio
 print ("Ordenar lista ordena descendentemente",total)

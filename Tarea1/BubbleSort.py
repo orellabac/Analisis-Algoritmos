@@ -1,29 +1,32 @@
 import random
 import time
 
-def generacion():
+def generacion(longitud):
     lista = []
-    for i in range (1,100000):
+    for i in range (0,longitud):
         
         numero = int (random.uniform(0,100000))
         
         lista.append(numero)
     return lista
+
 def bubblesort(l):
-    print ("hola")
     for pasada in range(1, len(l)-1):
         for i in range(0,len(l)-1):
           
             if l[i] > l[i+1]:
                 l[i], l[i+1] = l[i+1], l[i]
-    print ("ready")
+    
     return 0
 
 
 def main():
-    lista = generacion()
-    print ("Espere mientras el programa ordena la lista. Esto va a tardar un rato")
-
+    print ("BubbleSort")
+    print ("Informacion Basica: El algorito genera una lista aleatoria, dicha lista no se muestra. ")
+    longitud = int (raw_input ("Ingrese la longitud de elementos deseados"))
+    lista = generacion(longitud)
+    print ("Espere mientras el programa ordena la lista. Esto puede tardar")
+    
     inicio = time.time()
     bubblesort(lista)    
     fin=time.time()
