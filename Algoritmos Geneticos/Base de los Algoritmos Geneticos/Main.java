@@ -15,7 +15,7 @@ public class Main{
 			System.out.print(prueba.getGen(i));
 		}
 		Fitness x = new Fitness();
-		
-		System.out.print(x.getFitness(prueba));
+		System.out.println(" ");
+		System.out.println(x.getFitness(prueba));
     }
 }
