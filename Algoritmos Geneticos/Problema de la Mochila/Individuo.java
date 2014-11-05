@@ -14,6 +14,8 @@ public class Individuo {
     private int fitness = 0;
 
     //crear un individuo aleatorio
+    
+    
     public void generarIndividuo(){
         Random rg = new Random();
         for(int i =0; i < largoPorDefecto; i++){

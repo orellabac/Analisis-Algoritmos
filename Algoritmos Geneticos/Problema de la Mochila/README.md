@@ -1,0 +1,1 @@
+¿Como ejecutar?	La tarea se encuentra  en una carpeta. En la carpeta se encontrara el código fuente y un archivo .jar para ejecutar el jar se debe de descargar y abrir una terminal, dirigirse a la dirección del archivo por medio de la terminal y escribir el siguiente comando	java -jar Mochila_Geneticos.jar 

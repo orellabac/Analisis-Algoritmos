@@ -4,7 +4,7 @@ import java.util.ArrayList;
 public class Algoritmo_Genetico {
 	private Poblacion pob;
 	private ArrayList<Integer>fitnnes_posible=new ArrayList<Integer>();
-	private int peso_maximo;
+	private int generaciones;
 	
 	
 	
@@ -20,17 +20,17 @@ public class Algoritmo_Genetico {
 	public void setFitnnes_posible(ArrayList<Integer> fitnnes_posible) {
 		this.fitnnes_posible = fitnnes_posible;
 	}
-	public int getPeso_maximo() {
-		return peso_maximo;
+	public int getGeneraciones() {
+		return generaciones;
 	}
-	public void setPeso_maximo(int peso_maximo) {
-		this.peso_maximo = peso_maximo;
+	public void generaciones(int peso_maximo) {
+		this.generaciones = peso_maximo;
 	}
 
 
 
-	public Algoritmo_Genetico(ArrayList<Objeto>partida,int peso_maximo) {
-		
+	public Algoritmo_Genetico(ArrayList<Objeto>partida,int generaciones) {
+			this.generaciones=generaciones;
 			pob = new Poblacion(partida);
 			for (int i=0;i<pob.size();i++){
 				fitnnes_posible.add(pob.getIndividuo(i).getFitness());
@@ -42,7 +42,7 @@ public class Algoritmo_Genetico {
 		//Como la idea es poder llevar más objetos se hara una selección por torneo.
 		//Con la idea de poder llevar los objetos mas pesados..... Ya que se supone que estos
 		//tiene un mayor valor
-		for (int x=0;x<3;x++){
+		for (int x=0;x<generaciones;x++){
 		Poblacion nueva = new Poblacion(pob.size(),false);
 		for (int i=0;i<pob.size();i++){
 			int ale1=(int)Math.floor(Math.random()*pob.size());
