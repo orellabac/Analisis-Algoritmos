@@ -1,0 +1,6 @@
+Observaciones
+=============
+La segunda pregunta cinco es incorrecta
+
+La pregunta 6 es incorrecta. El psedocodigo no describe un algoritmo de composicion correcto.
+Ademas no se brinda ninguna analisis de complejidad correspondiente
